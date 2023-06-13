@@ -1,0 +1,48 @@
+﻿ERntityler Domainde Oluturduk Kal�t�m Ald�k 
+Application i�erisinde Abstractions da interface olu�tur
+Bu olu�an interface vt ile alakal� ise Persistence da somutu e�ilse Infrasture de somutu olu�turulur,
+
+
+Controller =>Api Empty Controller : ProductsController.cs created
+
+ServiceRegistration IOC CONTAINER 
+BUNU 
+�serviceCollection parametesi ver IOC DE O �EK�LDE OLDU�U ���N VE �U PAKET� Y�KLE
+using Microsoft.Extensions.DependencyInjection;
+
+Domain Ve Application Katmanlar� Core KlaS�R� ��erisinde Olu�turulur. �ekirdek YaPI Olduklar� i�in Gelenek Bu �ekildedir.
+Servislerimizi Olu�turdu�umuz Katmanlar Olan Infrastructure Ve Persi.  Katmanlar� inf. Klasoru ��erisinde Olu�turulur.
+Srevislerle �lgili AltYap� Burada Olu�turulur.
+
+Presantatiomn Uygulamalar� is Presentation i�erisinde Olu�turulur.Class Library den ziyade Api tarz�nda projeler bar�nd�rabilir.
+
+----------------------------------------------------------------------------------------------------------
+Product					 Orders					 Customers					CrossTable Oto olu�acak 
+Orders(n-n)				Product(n-n)			Orders(1-n)								
+						Customers(n-1)	
+----------------------------------------------------------------------------------------------------------
+EfCore Paketleri Persistence ye kurar�z
+
+appsettings.json Connection String Reader
+Configuration
+Configuration.JSON differen area
+
+Infrastructure Ve Persistence => Application 
+Ebook.Application =>Domain
+API =>DOMAİN Ve Persistence
+--------------------------------------------------------
+Application Katmanına Evrensel Repository interfaceleri tanuımlamaya başlıyoruz.
+IRepository interface olarak açarsan Solide aykırı
+IRead Ve IWrite olarak ayırman
+
+
+IQueryable :Sorgu Üzerinde çalışılacaksqa
+IEnumarable :InMemory de çalışır List de Ienumarable dir.
+
+
+2)Mimariyi Tasarlamak
+Aplication Katmanında İnterfaceleri tanımladık 
+
+
+---
+interceptor : trafik polisi farzedebilirsin 
