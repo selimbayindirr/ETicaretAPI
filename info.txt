@@ -46,3 +46,5 @@ Aplication Katmanında İnterfaceleri tanımladık
 
 ---
 interceptor : trafik polisi farzedebilirsin 
+
+19.06.2023 -t
