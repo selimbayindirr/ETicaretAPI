@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9A030DEF-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0BDAEE49-2F41-45B4-8D58-13FF12405B76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.infrastructure", "infrastructure\ETicaretAPI.infrastructure\ETicaretAPI.infrastructure.csproj", "{E5F2CB39-2378-46AA-9A25-5E5D1D6B3C67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETicaretAPI.infrastructure", "infrastructure\ETicaretAPI.infrastructure\ETicaretAPI.infrastructure.csproj", "{E5F2CB39-2378-46AA-9A25-5E5D1D6B3C67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Application", "Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj", "{25C0949F-6031-4DE9-B084-AA1E4743E460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETicaretAPI.Application", "Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj", "{25C0949F-6031-4DE9-B084-AA1E4743E460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Domain", "Core\ETicaretAPI.Domain\ETicaretAPI.Domain.csproj", "{B5C060E6-0870-40A4-8CBF-EDA2DC29F3F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETicaretAPI.Domain", "Core\ETicaretAPI.Domain\ETicaretAPI.Domain.csproj", "{B5C060E6-0870-40A4-8CBF-EDA2DC29F3F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Persistence", "Infrastructure\ETicaret.Persistence\ETicaretAPI.Persistence.csproj", "{3E4BE1D7-A929-4EB4-B5C7-ADC90D30A0CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETicaretAPI.Persistence", "Infrastructure\ETicaret.Persistence\ETicaretAPI.Persistence.csproj", "{3E4BE1D7-A929-4EB4-B5C7-ADC90D30A0CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{45195481-FAA2-41D2-874C-CCA3AB1A813D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.API", "Presentation\ETicaretAPI.API\ETicaretAPI.API.csproj", "{A39B39F6-362B-465E-B813-DA0EA8E55A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETicaretAPI.API", "Presentation\ETicaretAPI.API\ETicaretAPI.API.csproj", "{A39B39F6-362B-465E-B813-DA0EA8E55A65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{0DC2B2AD-C327-4B52-824D-D590D1DEA62E}"
 	ProjectSection(SolutionItems) = preProject
