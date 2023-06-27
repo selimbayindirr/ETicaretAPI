@@ -9,12 +9,10 @@ namespace ETicaretAPI.API.Controllers
     public class ProductsInMemoryController : ControllerBase
     {
         private readonly InMemoryIProductService _productService;
-
         public ProductsInMemoryController(InMemoryIProductService productService)
         {
             _productService = productService;
         }
-
         [HttpGet]
         public IActionResult GetInMemoryProducts()
         {

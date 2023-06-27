@@ -15,14 +15,11 @@ namespace ETicaretAPI.Persistence.Concretes.Repositories
     public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
         private readonly ETicaretAPIDbContext _context;
-
         public ReadRepository(ETicaretAPIDbContext context)
         {
             _context = context;
         }
-
         public DbSet<T> Table => _context.Set<T>();
-
         public IQueryable<T> GetAll(bool tracking = true)
         //  =>  Table;//tracking kullanacağım için scope lara geçtim
         {
@@ -30,7 +27,6 @@ namespace ETicaretAPI.Persistence.Concretes.Repositories
             if (!tracking)
                 query = query.AsNoTracking();//false ise takip etmesin
             return query;
-
         }
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> expression, bool tracking = true)
         // =>await  Table.FirstOrDefaultAsync(expression); tracking
@@ -41,7 +37,6 @@ namespace ETicaretAPI.Persistence.Concretes.Repositories
             return await query.FirstOrDefaultAsync(expression); ;
 
         }
-
         public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression, bool tracking = true)
         //=>Table.Where(expression);
         {
@@ -61,10 +56,6 @@ namespace ETicaretAPI.Persistence.Concretes.Repositories
           //  return await query.FindAsync(Guid.Parse(id)); 
             //IQURABLE DE FİNDASYNC YOK ONUN YERİNE 
            return await query.FirstOrDefaultAsync(data => data.Id==Guid.Parse(id)); 
-
-
         }
-        
-
     }
 }

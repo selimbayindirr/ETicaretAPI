@@ -40,10 +40,6 @@ namespace ETicaretAPI.Persistence
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             #endregion
-
-
-
-
         }
     }
 }
