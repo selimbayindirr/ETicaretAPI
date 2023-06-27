@@ -46,3 +46,5 @@ Aplication Katmanında İnterfaceleri tanımladık
 
 ---
 interceptor : trafik polisi farzedebilirsin 
+
+7.ders itibari ile tracking konusuna dair düzenlemeler yapıldı

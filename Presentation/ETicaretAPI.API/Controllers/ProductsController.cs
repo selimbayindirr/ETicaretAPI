@@ -17,6 +17,15 @@ namespace ETicaretAPI.API.Controllers
             _productWriteRepository = productWriteRepository;
             _productReadRepository = productReadRepository;
         }
+        [HttpPut]
+        public async Task GetTrackingTest()
+        {
+
+            Product p = await _productReadRepository.GETByIdAsync("D58B0704-B105-4617-8AC1-19EABB9F4D9E",false);
+            //false olursa tracking ile yapılan çalışmalar ,işlenmesin
+            p.ProductName = "Bardak";
+            await _productWriteRepository.SaveAsync();
+        }
 
         [HttpGet]
         public async Task Get()
@@ -36,5 +45,7 @@ namespace ETicaretAPI.API.Controllers
            Product product= await _productReadRepository.GETByIdAsync(id);
             return Ok(product);
         }
+
+  
     }
 }
