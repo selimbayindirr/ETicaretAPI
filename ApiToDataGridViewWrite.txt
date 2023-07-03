@@ -1,0 +1,51 @@
+using Microsoft.VisualBasic.ApplicationServices;
+using Newtonsoft.Json;//<-----------------------------------------------------------------+++
+using System.Windows.Forms;
+
+namespace JSONDatas
+{
+    public partial class Form1 : Form
+    {
+        private const string ApiUrl = "https://localhost:7098/api/TestProducts/GetProductsListed";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            // JSON verisini çekme
+            List<Product> users = await GetUsersAsync(ApiUrl);
+
+            // Veriyi DataGridView'e yazdýrma
+            dataGridView1.DataSource = users;
+        }
+        private async Task<List<Product>> GetUsersAsync(string url)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+                    string jsonData = await response.Content.ReadAsStringAsync();
+                    List<Product> users = JsonConvert.DeserializeObject<List<Product>>(jsonData);
+                    return users;
+                }
+                catch (HttpRequestException ex)
+                {
+                    Console.WriteLine("Hata! Ýstek baþarýsýz: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+        public class Product
+        {
+            public string ProductName { get; set; }
+            public string ProductDescription { get; set; }
+            public int Stock { get; set; }
+            public float Price { get; set; }
+        }
+    }
+}
